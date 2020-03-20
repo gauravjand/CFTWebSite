@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+</head>
+
+<body>
+  <form method="post" action="/CFTDetails" id='surveyForm'>
+    <div class="main-content">
+        <p>Please enter the name of role for which you need CFT: </p>
+        <input type="text" name="txtRoleName" required placeholder="Role Name"></input>
+        <input id="btnSubmit" type="submit" value="Find CFT" onclick="findCFTName();"></input>
+<br>
+        <div class="main-content" hidden id="CFTName">wefrewf</div>
+    </div>
+</form>
+<script>
+
+
+$(document).ready(function(){
+
+function findCFTName()
+{
+  alert("Hello There !!")
+var emptyFields="";
+
+
+if (document.forms["surveyForm"]["isInHouse"].value == "") {
+  emptyFields= emptyFields+"1";
+
+}
+if (document.forms["surveyForm"]["txtVendorName"].value == "") {
+  emptyFields= emptyFields+",2";
+}
+
+}
+
+</script>
+</body>
+
+</html>
