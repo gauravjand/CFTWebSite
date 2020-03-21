@@ -45,6 +45,6 @@ app.post('/CFTDetails', function(request, response){
 });
 
 
-app.listen(3000, () => {
+app.listen(80, () => {
     console.log('Server is up on port 3000.')
 })
