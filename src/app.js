@@ -1,7 +1,6 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
-const queryString = require('querystring');
 const app = express()
 
 // Define paths for Express config
