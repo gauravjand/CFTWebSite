@@ -26,5 +26,7 @@ var CFTName=""
 
 
 }
+
+console.log("returned Value: ", getCFTDetails("request.body.txtRoleName"))
  
 module.exports={getCFTDetails};
