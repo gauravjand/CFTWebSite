@@ -14,7 +14,7 @@ var cloudformation = new AWS.CloudFormation({apiVersion: '2010-05-15'});
 
   var params = {
 
-    PhysicalResourceId: 'AdvStackSecurityGroup2'
+    PhysicalResourceId: roleName
 
   };
   cloudformation.describeStackResources(params, function(err, data) {
