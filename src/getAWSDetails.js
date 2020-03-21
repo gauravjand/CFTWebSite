@@ -8,19 +8,20 @@ const getCFTDetails=function(roleName){
 
 
 // Set the region 
-AWS.config.update({region: 'us-east-2'});
+// AWS.config.update({region: 'us-east-2'});
 
-var cloudformation = new AWS.CloudFormation({apiVersion: '2010-05-15'});
+// var cloudformation = new AWS.CloudFormation({apiVersion: '2010-05-15'});
 
-  var params = {
+//   var params = {
 
-    PhysicalResourceId: roleName
+//     PhysicalResourceId: roleName
 
-  };
-  cloudformation.describeStackResources(params, function(err, data) {
-    if (err) return "No stack found for the role " + roleName
-    else     return data.StackResources[0].StackName;           // successful response
-  });
+//   };
+//   cloudformation.describeStackResources(params, function(err, data) {
+//     if (err) return "No stack found for the role " + roleName
+//     else     return data.StackResources[0].StackName;           // successful response
+//   });
+return "Hello " + roleName
 
 }
  
