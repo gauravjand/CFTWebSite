@@ -20,10 +20,32 @@
     </div>
 </form>
 <script>
-function findCFTName()
-{
- document.getElementById("CFTForm").submit();
-}
+console.log("weddnwendineininin")
+    var AWS = require('aws-sdk');
+AWS.config.update({region: 'us-east-2'});
+
+
+var cloudformation = new AWS.CloudFormation({apiVersion: '2010-09-09'});
+var params = {
+    PhysicalResourceId: request.body.txtRoleName
+  };
+
+  function findCFTName(params)
+  {
+    cloudformation.describeStackResources(params, function(err, data) {
+        if (err) console.log(err, err.stack);
+        else {
+            console.log(data.StackResources[0].StackName)
+            document.getElementById("CFTName").innerText=data.StackResources[0].StackName
+            document.getElementById("CFTName").style.display = "block"
+         }
+      });
+
+  }
+
+
+
+
 </script>
 </body>
 
